@@ -1,0 +1,12 @@
+z=0
+while z<20:
+    z=z+2
+    print("Ответ",z)
+
+print("Часть 2")
+e=-1
+r=-19
+while r<e:
+    e=e-3
+    print("Ответ",e)
+print("Конец")
