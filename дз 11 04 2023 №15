@@ -1,0 +1,6 @@
+a = 2
+b = 20
+while a <= b:
+    o = 2 * a
+    print(8 * o ** 3 - o)
+    a += 2
