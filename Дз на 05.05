@@ -1,0 +1,16 @@
+from random import randint
+x = randint(1,100)
+i=1
+print("Отгадайте число за 100 попыток")
+while i <= 100:
+    u = int(input(str(i) + "-я попытка: "))
+    if u > x:
+        print("Больше загадоного числа")
+    elif u < x:
+        print("Меньше загадоного числа ")
+    else:
+        print("Угадано с %d-й попытки" % i)
+        break
+    i += 1
+else:
+    print("Попытки кончились,  Было загадано", x)
