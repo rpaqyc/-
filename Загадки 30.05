@@ -1,0 +1,49 @@
+def yeah():
+    print(
+        " Представляю игру из 3 загадок, все ответы с маленькой буквы")
+    answer_1:   str = "одно"
+    answer_2:   str = "шахматы"
+    answer_3:   str = "спать по ночам"
+    question_1: str = "Сколько лет в году?."
+    question_2: str = "Где случается такое, что конь через коня прыгает?."
+    question_3: str = "Как человеку не спать 9 дней?."
+    question_number: int = 1
+    correct_answers: int = 0
+    errors:          int = 0
+
+    while errors < 5 and correct_answers < 3:
+         if question_number == 1:
+             user_input_1: str = input(question_1 + '\n').strip().lower()
+             if user_input_1 == answer_1:
+                 
+                 print("Молодец!")
+                 correct_answers += 1
+                 question_number += 1
+             else:
+                 errors += 1
+                 print("Попробуйте еще раз‚!", errors," количество ошибок")
+
+         elif question_number == 2:
+             user_input_2: str = input(question_2 + '\n').strip().lower()
+
+             if user_input_2 == answer_2:
+                 print("Супер!")
+                 correct_answers += 1
+                 question_number += 1
+             else:
+                 errors += 1
+                 print("Попробуйте еще раз‚!", errors ,"количество ошибок")
+         elif question_number == 3:
+             user_input_3: str = input(question_3 + '\n').strip().lower()
+             if user_input_3 == answer_3:
+                 print("Класс!")
+                 correct_answers += 1
+                 question_number += 1
+             else:
+                 errors += 1
+                 print("Попробуйте еще раз‚!" , errors ,"количество ошибок")
+         if errors == 5:
+             print("Поражение!")
+         elif correct_answers == 3:
+             print("Победа!")
+yeah()
